@@ -96,7 +96,7 @@
               <webappDirectory>${project.build.outputDirectory}/VAADIN/widgetsets</webappDirectory>
               <warSourceDirectory>src/main/resources/VAADIN/widgetsets</warSourceDirectory>
               <inplace>${inplace}</inplace>
-              <module>info.magnolia.ui.vaadin.gwt.MagnoliaWidgetSet</module>
+              <module>info.magnolia.widgetset.MagnoliaWidgetSet</module>
               <draftCompile>${draftCompile}</draftCompile>
               <enableClosureCompiler>${enableClosure}</enableClosureCompiler>
               <disableCastChecking>${disableCastChecking}</disableCastChecking>
