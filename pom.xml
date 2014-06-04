@@ -61,6 +61,12 @@
       <groupId>com.vaadin</groupId>
       <artifactId>vaadin-client-compiler</artifactId>
       <scope>provided</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>xml-apis</groupId>
+          <artifactId>xml-apis</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <dependency>
