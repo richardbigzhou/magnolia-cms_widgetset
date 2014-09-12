@@ -34,7 +34,7 @@
       <dependency>
         <groupId>info.magnolia.ui</groupId>
         <artifactId>magnolia-ui-project</artifactId>
-        <version>5.3.3-SNAPSHOT</version>
+        <version>5.3.3</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
