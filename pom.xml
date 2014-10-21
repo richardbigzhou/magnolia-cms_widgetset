@@ -22,6 +22,8 @@
     <draftCompile>false</draftCompile>
     <enableClosure>false</enableClosure>
     <disableCastChecking>false</disableCastChecking>
+    <magnoliaUiVersion>5.3.5-SNAPSHOT</magnoliaUiVersion>
+    <vaadinVersion>7.1.7</vaadinVersion>
     <!-- We want to disable Clover for this module, so we removed enable-clover from the release-profiles. Unfortunately,
          this doesn't work, and would need to be done at parent level (reactor). So we still have to reconfigure the
          Clover plugin for this module.
@@ -29,30 +31,11 @@
     <additionalReleaseProfiles>gwt-compile-production</additionalReleaseProfiles>
   </properties>
 
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>info.magnolia.ui</groupId>
-        <artifactId>magnolia-ui-project</artifactId>
-        <version>5.3.5-SNAPSHOT</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-
   <dependencies>
     <dependency>
       <groupId>com.vaadin</groupId>
-      <artifactId>vaadin-server</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.vaadin</groupId>
-      <artifactId>vaadin-client-compiled</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.vaadin</groupId>
       <artifactId>vaadin-client</artifactId>
+      <version>${vaadinVersion}</version>
       <scope>provided</scope>
     </dependency>
 
@@ -60,11 +43,16 @@
     <dependency>
       <groupId>com.vaadin</groupId>
       <artifactId>vaadin-client-compiler</artifactId>
+      <version>${vaadinVersion}</version>
       <scope>provided</scope>
       <exclusions>
         <exclusion>
           <groupId>xml-apis</groupId>
           <artifactId>xml-apis</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>commons-logging</groupId>
+          <artifactId>commons-logging</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -72,10 +60,12 @@
     <dependency>
       <groupId>info.magnolia.ui</groupId>
       <artifactId>magnolia-ui-vaadin-common-widgets</artifactId>
+      <version>${magnoliaUiVersion}</version>
     </dependency>
     <dependency>
       <groupId>info.magnolia.ui</groupId>
       <artifactId>magnolia-ui-widget-editor</artifactId>
+      <version>${magnoliaUiVersion}</version>
     </dependency>
   </dependencies>
 
@@ -86,6 +76,7 @@
       <plugin>
         <groupId>com.vaadin</groupId>
         <artifactId>vaadin-maven-plugin</artifactId>
+        <version>${vaadinVersion}</version>
         <configuration>
           <!-- These 2 parameters are not used during the lifecycle-bound execution of the plugin. They're needed for debug mode though. -->
           <runTarget>.magnolia/admincentral</runTarget>
