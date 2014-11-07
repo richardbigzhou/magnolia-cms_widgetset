@@ -18,6 +18,7 @@
   </scm>
 
   <properties>
+    <javaVersion>1.7</javaVersion>
     <inplace>false</inplace>
     <draftCompile>false</draftCompile>
     <enableClosure>false</enableClosure>
