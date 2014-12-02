@@ -24,6 +24,7 @@
     <enableClosure>false</enableClosure>
     <disableCastChecking>false</disableCastChecking>
     <magnoliaUiVersion>5.4-SNAPSHOT</magnoliaUiVersion>
+    <magnoliaPagesVersion>5.4-SNAPSHOT</magnoliaPagesVersion>
     <vaadinVersion>7.3.4</vaadinVersion>
     <!-- We want to disable Clover for this module, so we removed enable-clover from the release-profiles. Unfortunately,
          this doesn't work, and would need to be done at parent level (reactor). So we still have to reconfigure the
@@ -64,9 +65,9 @@
       <version>${magnoliaUiVersion}</version>
     </dependency>
     <dependency>
-      <groupId>info.magnolia.ui</groupId>
-      <artifactId>magnolia-ui-widget-editor</artifactId>
-      <version>${magnoliaUiVersion}</version>
+      <groupId>info.magnolia.pages</groupId>
+      <artifactId>magnolia-pages-editor-widget</artifactId>
+      <version>${magnoliaPagesVersion}</version>
     </dependency>
   </dependencies>
 
