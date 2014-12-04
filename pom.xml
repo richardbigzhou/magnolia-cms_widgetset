@@ -8,7 +8,7 @@
   <groupId>info.magnolia.widgetset</groupId>
   <artifactId>magnolia-vaadin-widgetset</artifactId>
   <name>magnolia-vaadin-widgetset</name>
-  <version>5.4-SNAPSHOT</version>
+  <version>5.4-AUTOSUGGEST-SNAPSHOT</version>
 
   <scm>
     <connection>scm:git:http://git.magnolia-cms.com/magnolia_widgetset</connection>
@@ -23,7 +23,7 @@
     <draftCompile>false</draftCompile>
     <enableClosure>false</enableClosure>
     <disableCastChecking>false</disableCastChecking>
-    <magnoliaUiVersion>5.4-SNAPSHOT</magnoliaUiVersion>
+    <magnoliaUiVersion>5.4-AUTOSUGGEST-SNAPSHOT</magnoliaUiVersion>
     <vaadinVersion>7.3.4</vaadinVersion>
     <!-- We want to disable Clover for this module, so we removed enable-clover from the release-profiles. Unfortunately,
          this doesn't work, and would need to be done at parent level (reactor). So we still have to reconfigure the
