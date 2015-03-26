@@ -23,7 +23,7 @@
     <draftCompile>false</draftCompile>
     <enableClosure>false</enableClosure>
     <disableCastChecking>false</disableCastChecking>
-    <magnoliaUiVersion>5.3.7</magnoliaUiVersion>
+    <magnoliaUiVersion>5.3.8-SNAPSHOT</magnoliaUiVersion>
     <vaadinVersion>7.1.7</vaadinVersion>
     <!-- We want to disable Clover for this module, so we removed enable-clover from the release-profiles. Unfortunately,
          this doesn't work, and would need to be done at parent level (reactor). So we still have to reconfigure the
