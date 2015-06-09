@@ -23,7 +23,7 @@
     <draftCompile>false</draftCompile>
     <enableClosure>false</enableClosure>
     <disableCastChecking>false</disableCastChecking>
-    <magnoliaUiVersion>5.3.9-SNAPSHOT</magnoliaUiVersion>
+    <magnoliaUiVersion>5.3.10-SNAPSHOT</magnoliaUiVersion>
     <vaadinVersion>7.1.7</vaadinVersion>
     <!-- We want to disable Clover for this module, so we removed enable-clover from the release-profiles. Unfortunately,
          this doesn't work, and would need to be done at parent level (reactor). So we still have to reconfigure the
@@ -61,12 +61,12 @@
     <dependency>
       <groupId>info.magnolia.ui</groupId>
       <artifactId>magnolia-ui-vaadin-common-widgets</artifactId>
-      <version>5.3.10-SNAPSHOT</version>
+      <version>${magnoliaUiVersion}</version>
     </dependency>
     <dependency>
       <groupId>info.magnolia.ui</groupId>
       <artifactId>magnolia-ui-widget-editor</artifactId>
-      <version>5.3.10-SNAPSHOT</version>
+      <version>${magnoliaUiVersion}</version>
     </dependency>
   </dependencies>
 
