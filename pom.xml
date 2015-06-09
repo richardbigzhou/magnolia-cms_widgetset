@@ -8,13 +8,13 @@
   <groupId>info.magnolia.widgetset</groupId>
   <artifactId>magnolia-vaadin-widgetset</artifactId>
   <name>magnolia-vaadin-widgetset</name>
-  <version>5.3.9-SNAPSHOT</version>
+  <version>5.3.9</version>
 
   <scm>
     <connection>scm:git:http://git.magnolia-cms.com/magnolia_widgetset</connection>
     <developerConnection>scm:git:https://git.magnolia-cms.com/magnolia_widgetset</developerConnection>
     <url>http://git.magnolia-cms.com/gitweb/?p=magnolia_widgetset</url>
-    <tag>HEAD</tag>
+    <tag>magnolia-vaadin-widgetset-5.3.9</tag>
   </scm>
 
   <properties>
@@ -61,12 +61,12 @@
     <dependency>
       <groupId>info.magnolia.ui</groupId>
       <artifactId>magnolia-ui-vaadin-common-widgets</artifactId>
-      <version>${magnoliaUiVersion}</version>
+      <version>5.3.9</version>
     </dependency>
     <dependency>
       <groupId>info.magnolia.ui</groupId>
       <artifactId>magnolia-ui-widget-editor</artifactId>
-      <version>${magnoliaUiVersion}</version>
+      <version>5.3.9</version>
     </dependency>
   </dependencies>
 
