@@ -3,7 +3,7 @@
   <parent>
     <groupId>info.magnolia.maven.poms</groupId>
     <artifactId>magnolia-parent-pom-community</artifactId>
-    <version>30</version>
+    <version>31</version>
   </parent>
   <groupId>info.magnolia.widgetset</groupId>
   <artifactId>magnolia-vaadin-widgetset</artifactId>
@@ -26,10 +26,7 @@
     <magnoliaUiVersion>5.4-SNAPSHOT</magnoliaUiVersion>
     <magnoliaPagesVersion>5.4-SNAPSHOT</magnoliaPagesVersion>
     <vaadinVersion>7.3.4</vaadinVersion>
-    <!-- We want to disable Clover for this module, so we removed enable-clover from the release-profiles. Unfortunately,
-         this doesn't work, and would need to be done at parent level (reactor). So we still have to reconfigure the
-         Clover plugin for this module.
-         Additionally, gwt-compile-production had to be added to the parent pom for the same reason. Leaving it here for reference. -->
+    <skipClover>true</skipClover>
     <additionalReleaseProfiles>gwt-compile-production</additionalReleaseProfiles>
   </properties>
 
@@ -108,18 +105,6 @@
         </executions>
       </plugin>
     </plugins>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <!-- We're doing this here because the trick implemented for BUILD-110 actually does not work with submodules of reactors. -->
-          <groupId>com.atlassian.maven.plugins</groupId>
-          <artifactId>maven-clover2-plugin</artifactId>
-          <configuration>
-            <skip>true</skip>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
   </build>
   <profiles>
     <profile>
