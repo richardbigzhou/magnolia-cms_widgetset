@@ -19,7 +19,6 @@
 
   <properties>
     <javaVersion>1.7</javaVersion>
-    <inplace>false</inplace>
     <draftCompile>false</draftCompile>
     <enableClosure>false</enableClosure>
     <disableCastChecking>false</disableCastChecking>
@@ -70,39 +69,42 @@
 
   <build>
     <plugins>
-      <!-- Compile custom GWT components or widget dependencies with the
-        GWT compiler -->
       <plugin>
         <groupId>com.vaadin</groupId>
         <artifactId>vaadin-maven-plugin</artifactId>
         <version>${vaadinVersion}</version>
         <configuration>
-          <!-- These 2 parameters are not used during the lifecycle-bound execution of the plugin. They're needed for debug mode though. -->
-          <runTarget>.magnolia/admincentral</runTarget>
-          <!-- this is not a webapp -->
-          <noServer>true</noServer>
+          <!-- currently using default, change carefully as this param applies to all forked JVMs
+               i.e. GWT compilation will take up to this max memory, times the number of local workers (defaults to platform processors number) -->
+          <extraJvmArgs>-Xmx1024M -Xss1024k</extraJvmArgs>
+          <module>info.magnolia.widgetset.MagnoliaWidgetSet</module>
+          <!-- put the created resources on the classpath (and the gwt-unitCache outside of it) -->
+          <webappDirectory>${project.build.outputDirectory}/VAADIN/widgetsets</webappDirectory>
+          <persistentunitcachedir>${project.build.directory}</persistentunitcachedir>
+          <!-- widgetset is pretty monolithic atm, don't bother generating reports -->
+          <compileReport>false</compileReport>
+          <draftCompile>${draftCompile}</draftCompile>
+          <enableClosureCompiler>${enableClosure}</enableClosureCompiler>
+          <disableCastChecking>${disableCastChecking}</disableCastChecking>
         </configuration>
         <executions>
           <execution>
-            <configuration>
-              <!-- currently using default, change carefully as this param applies to all forked JVMs
-                   i.e. GWT compilation will take up to this max memory, times the number of local workers (defaults to platform processors number) -->
-              <extraJvmArgs>-Xmx1536M -Xss1024k</extraJvmArgs>
-              <!-- put the created resources on the classpath -->
-              <webappDirectory>${project.build.outputDirectory}/VAADIN/widgetsets</webappDirectory>
-              <warSourceDirectory>src/main/resources/VAADIN/widgetsets</warSourceDirectory>
-              <inplace>${inplace}</inplace>
-              <module>info.magnolia.widgetset.MagnoliaWidgetSet</module>
-              <draftCompile>${draftCompile}</draftCompile>
-              <enableClosureCompiler>${enableClosure}</enableClosureCompiler>
-              <disableCastChecking>${disableCastChecking}</disableCastChecking>
-            </configuration>
             <goals>
               <goal>resources</goal>
+              <goal>update-widgetset</goal>
               <goal>compile</goal>
             </goals>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <excludes>
+            <exclude>**/VAADIN/gwt-unitCache/**</exclude>
+            <exclude>**/VAADIN/widgetsets/WEB-INF/**</exclude>
+          </excludes>
+        </configuration>
       </plugin>
     </plugins>
   </build>
@@ -118,16 +120,14 @@
       </activation>
       <properties>
         <draftCompile>false</draftCompile>
-        <inplace>false</inplace>
         <enableClosure>true</enableClosure>
         <disableCastChecking>true</disableCastChecking>
       </properties>
     </profile>
     <profile>
-      <id>gwt-compile-draft-inplace</id>
+      <id>gwt-compile-draft</id>
       <properties>
         <draftCompile>true</draftCompile>
-        <inplace>true</inplace>
       </properties>
     </profile>
   </profiles>
