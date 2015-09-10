@@ -22,7 +22,7 @@
     <draftCompile>false</draftCompile>
     <enableClosure>false</enableClosure>
     <disableCastChecking>false</disableCastChecking>
-    <magnoliaUiVersion>5.4.2</magnoliaUiVersion>
+    <magnoliaUiVersion>5.4.3-SNAPSHOT</magnoliaUiVersion>
     <magnoliaPagesVersion>5.4.1</magnoliaPagesVersion>
     <vaadinVersion>7.4.7</vaadinVersion>
     <skipClover>true</skipClover>
