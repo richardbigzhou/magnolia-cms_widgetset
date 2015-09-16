@@ -22,7 +22,7 @@
     <draftCompile>false</draftCompile>
     <enableClosure>false</enableClosure>
     <disableCastChecking>false</disableCastChecking>
-    <magnoliaUiVersion>5.3.11-SNAPSHOT</magnoliaUiVersion>
+    <magnoliaUiVersion>5.3.11</magnoliaUiVersion>
     <vaadinVersion>7.1.7</vaadinVersion>
     <skipClover>true</skipClover>
     <additionalReleaseProfiles>gwt-compile-production</additionalReleaseProfiles>
