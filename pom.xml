@@ -8,13 +8,13 @@
   <groupId>info.magnolia.widgetset</groupId>
   <artifactId>magnolia-vaadin-widgetset</artifactId>
   <name>magnolia-vaadin-widgetset</name>
-  <version>5.3.12-SNAPSHOT</version>
+  <version>5.3.12</version>
 
   <scm>
     <connection>scm:git:ssh://git.magnolia-cms.com/PLATFORM/widgetset</connection>
     <developerConnection>scm:git:ssh://git.magnolia-cms.com/PLATFORM/widgetset</developerConnection>
     <url>https://git.magnolia-cms.com/projects/PLATFORM/repos/widgetset</url>
-    <tag>HEAD</tag>
+    <tag>magnolia-vaadin-widgetset-5.3.12</tag>
   </scm>
 
   <properties>
