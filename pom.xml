@@ -14,7 +14,7 @@
     <connection>scm:git:ssh://git.magnolia-cms.com/PLATFORM/widgetset</connection>
     <developerConnection>scm:git:ssh://git.magnolia-cms.com/PLATFORM/widgetset</developerConnection>
     <url>https://git.magnolia-cms.com/projects/PLATFORM/repos/widgetset</url>
-    <tag>HEAD</tag>
+    <tag>magnolia-widgetset-5.4.x</tag>
   </scm>
 
   <properties>
