@@ -24,7 +24,7 @@
     <disableCastChecking>false</disableCastChecking>
     <magnoliaUiVersion>5.5-SNAPSHOT</magnoliaUiVersion>
     <magnoliaPagesVersion>5.5-SNAPSHOT</magnoliaPagesVersion>
-    <vaadinVersion>7.4.7</vaadinVersion>
+    <vaadinVersion>7.6.7</vaadinVersion>
     <skipClover>true</skipClover>
     <additionalReleaseProfiles>gwt-compile-production</additionalReleaseProfiles>
   </properties>
